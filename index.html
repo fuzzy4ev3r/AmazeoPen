@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>AmazeoPen</title>
+		<link rel="stylesheet" type="text/css" href="custom.css">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		<main>
+			<h1>AmazeoPen</h1>
+			<div id="imageContent">
+				<a id="indicator1" class="hover"><i class="fa fa-bullseye"></i> </a>
+					<div id="infoBox1" class="content"><p>The clicker is used to push out the tip of the pen which will be used for writing the ink on any surface, even your friends face!</p></div>
+
+				<a id="indicator2" class="hover"><i class="fa fa-bullseye"></i> </a>
+					<div id="infoBox2" class="content"><p>The clip is used as a hook so you can put it in any of your pockets, or hook it on your nose.</p></div>
+
+				<a id="indicator3" class="hover"><i class="fa fa-bullseye"></i> </a>
+					<div id="infoBox3" class="content"><p>The Disconnetor is used so you can take apart the pen with ease and not have to struggle with putting it back together, you can also get a personal assistanct to help you do this.</p></div>
+
+				<a id="indicator4" class="hover"><i class="fa fa-bullseye"></i> </a>
+					<div id="infoBox4" class="content"><p>This is where the ink comes out, our ink comes from the finest squids in the sea!</p></div>
+			</div>
+			<div id="fullDetails">
+				<h3>Full Details</h3>
+				<p>The details aren't important! You're important! We care about our customers so much that we don't bore you with useless information that you don't need. The only thing you need to know is that you need this pen! Yes you! Right there! Right now! Go buy this now! You totally won't regret it!</p>
+			</div>
+
+			<a onclick="playSound('noEmotion.mp3')" id="fun">Fun Button!</a>
+		</main>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+		<script>
+			$(document).ready(function() {
+				var display = function() {$(this).next(".content").toggleClass("visible");};
+
+				$(".hover").on("mouseenter", display);
+				$(".hover").on("mouseleave", display);
+			});
+		</script>
+
+		<script>
+   var playSound = function (soundFile) {
+      $("#fun").html("<embed src=\"" + soundFile + "\" hidden=\"true\" autostart=\"true\" />");
+   }
+</script>
+
+	</body>
+
+
+</html>
